@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion"
+    app:startDestination="@id/comprar">
+
+    <fragment
+        android:id="@+id/frCompra"
+        android:name="com.example.hojadetrabajo2yesseniamateo.frCompra"
+        android:label="fragment_fr_compra"
+        tools:layout="@layout/fragment_fr_compra" >
+        <action
+            android:id="@+id/action_frCompra_to_comprar"
+            app:destination="@id/comprar" />
+    </fragment>
+    <fragment
+        android:id="@+id/comprar"
+        android:name="com.example.hojadetrabajo2yesseniamateo.comprar"
+        android:label="fragment_comprar"
+        tools:layout="@layout/fragment_comprar" >
+        <action
+            android:id="@+id/action_comprar_to_frCompra"
+            app:destination="@id/frCompra" />
+    </fragment>
+</navigation>
